@@ -5,6 +5,14 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return GridView.builder(
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+      ),
+      itemBuilder: (BuildContext context, int index) {
+        return Placeholder();
+      },
+      itemCount: 25,
+    );
   }
 }
