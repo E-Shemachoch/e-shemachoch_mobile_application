@@ -5,6 +5,15 @@ class MyPurchasesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return ListView.builder(
+      shrinkWrap: true,
+      itemBuilder: (context, index) {
+        return ListTile(
+          title: Text('Item $index'),
+          subtitle: Text('DateTime'),
+          trailing: Text('CLAIMED'),
+        );
+      },
+    );
   }
 }
