@@ -5,6 +5,31 @@ class MyCartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Column(children: [
+      ListView.builder(
+        shrinkWrap: true,
+        itemBuilder: (context, index) {
+          return ListTile(
+            leading: FlutterLogo(),
+            title: Text('Item $index'),
+            subtitle: Text('$index ETB'),
+          );
+        },
+      ),
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          Text(
+            'Total',
+            textAlign: TextAlign.right,
+          ),
+          Text('152 ETB', textAlign: TextAlign.right),
+        ],
+      ),
+      ElevatedButton(
+        child: Text('CHECKOUT'),
+        onPressed: null,
+      )
+    ]);
   }
 }
