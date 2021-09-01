@@ -5,14 +5,17 @@ class MyNotificationPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
+    return ListView.separated(
       itemBuilder: (context, index) {
         return ListTile(
           leading: FlutterLogo(),
           title: Text('Notification $index'),
           subtitle: Text('DateTime'),
         );
+      },
+      itemCount: 4,
+      separatorBuilder: (BuildContext context, int index) {
+        return Divider();
       },
     );
   }

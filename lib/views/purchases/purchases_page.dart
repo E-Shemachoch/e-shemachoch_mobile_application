@@ -17,15 +17,24 @@ class MyPurchasesPage extends StatelessWidget {
       );
     }
 
-    return ListView.builder(
+    return ListView.separated(
       shrinkWrap: true,
       itemBuilder: (context, index) {
         return ListTile(
           title: Text('Item $index'),
           subtitle: Text('DateTime'),
-          trailing: Text('CLAIMED'),
+          trailing: index % 5 != 0
+              ? Text(
+                  'CLAIMED',
+                  style: TextStyle(color: Theme.of(context).accentColor),
+                )
+              : _buildClaimButton(),
         );
       },
+      separatorBuilder: (BuildContext context, int index) {
+        return Divider();
+      },
+      itemCount: 15,
     );
   }
 }
