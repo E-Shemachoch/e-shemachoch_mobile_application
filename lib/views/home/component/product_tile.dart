@@ -1,9 +1,3 @@
-<<<<<<< Updated upstream
-import 'package:eshemachoch_mobile_application/constants/api.dart';
-import 'package:eshemachoch_mobile_application/models/product.dart';
-import 'package:eshemachoch_mobile_application/views/home/product_detail.dart';
-import 'package:flutter/material.dart';
-=======
 import 'dart:io';
 
 import 'package:eshemachoch_mobile_application/constants/api.dart';
@@ -12,18 +6,12 @@ import 'package:eshemachoch_mobile_application/viewmodels/consumer/consumer_mode
 import 'package:eshemachoch_mobile_application/views/home/product_detail.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
->>>>>>> Stashed changes
 
 class MyProductTile extends StatelessWidget {
   const MyProductTile({Key? key, required this.product}) : super(key: key);
   final Product product;
   @override
   Widget build(BuildContext context) {
-<<<<<<< Updated upstream
-    return GestureDetector(
-      onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (_) => MyProductDetail(product: product,)));
-=======
     final consumer = context.read<ConsumerModel>().consumer!;
 
     return GestureDetector(
@@ -34,7 +22,6 @@ class MyProductTile extends StatelessWidget {
                 builder: (_) => MyProductDetail(
                       product: product,
                     )));
->>>>>>> Stashed changes
       },
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -42,14 +29,6 @@ class MyProductTile extends StatelessWidget {
           Expanded(
             child: ClipRRect(
               borderRadius: BorderRadius.circular(12.0),
-<<<<<<< Updated upstream
-              child: Image.network(
-                '$BASEURL/products/images/${product.image}',
-                fit: BoxFit.cover,
-                height: double.maxFinite,
-                width: double.maxFinite,
-              ),
-=======
               child: Image.network('$BASEURL/products/images/${product.image}',
                   fit: BoxFit.cover,
                   height: double.maxFinite,
@@ -57,7 +36,6 @@ class MyProductTile extends StatelessWidget {
                   headers: {
                     HttpHeaders.authorizationHeader: consumer.token!,
                   }),
->>>>>>> Stashed changes
             ),
           ),
           Padding(
