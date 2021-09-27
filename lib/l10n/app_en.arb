@@ -1,0 +1,38 @@
+{
+    "eshemachoch": "E-Shemachoch",
+    "@eshemachoch": {
+      "description": "The title of the app."
+    },
+
+    "home": "Home",
+    "@home": {
+      "description": "The home of the app."
+    },
+
+    "cart": "Cart",
+    "@cart": {
+      "description": "The cart of the app."
+    },
+
+    "orders": "Orders",
+    "@orders": {
+      "description": "The orders of the app."
+    },
+
+    "notifications": "Notifications",
+    "@notifications": {
+      "description": "The notifications of the app."
+    },
+     "account": "Account",
+    "@account": {
+      "description": "The account of the app."
+    },
+     "language": "Language",
+    "@language": {
+      "description": "The language of the app."
+    },
+     "logout": "Logout",
+    "@logout": {
+      "description": "The logout of the app."
+    }
+}

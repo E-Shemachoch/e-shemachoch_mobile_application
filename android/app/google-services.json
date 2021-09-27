@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "797435230173",
+    "project_id": "eshemachoch",
+    "storage_bucket": "eshemachoch.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797435230173:android:26f2667ecf7d7bd307a834",
+        "android_client_info": {
+          "package_name": "com.example.eshemachoch_mobile_application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "797435230173-thqdb6hlhjda67fh8fhogcu1cn9b7m15.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.eshemachoch_mobile_application",
+            "certificate_hash": "2307b824fa668e6e168da69d34f1a55e8d119c95"
+          }
+        },
+        {
+          "client_id": "797435230173-pp0dcr72tfk0t1okp7qjr5oc5de3ju2s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBopPcHBTLdMeYpP6X78TGpoeoUkYlX1lY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "797435230173-pp0dcr72tfk0t1okp7qjr5oc5de3ju2s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

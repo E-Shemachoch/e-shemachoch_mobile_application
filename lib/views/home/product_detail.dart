@@ -1,6 +1,15 @@
+<<<<<<< Updated upstream
 import 'package:eshemachoch_mobile_application/constants/api.dart';
 import 'package:eshemachoch_mobile_application/models/product.dart';
 import 'package:eshemachoch_mobile_application/viewmodels/cart/cart_model.dart';
+=======
+import 'dart:io';
+
+import 'package:eshemachoch_mobile_application/constants/api.dart';
+import 'package:eshemachoch_mobile_application/models/product.dart';
+import 'package:eshemachoch_mobile_application/viewmodels/cart/cart_model.dart';
+import 'package:eshemachoch_mobile_application/viewmodels/consumer/consumer_model.dart';
+>>>>>>> Stashed changes
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -18,25 +27,48 @@ class _MyProductDetailState extends State<MyProductDetail> {
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< Updated upstream
     handleAdding() {
       context.read<CartModel>().addProduct(widget.product.copyWith(quantity: quantity));
+=======
+    final consumer = context.read<ConsumerModel>().consumer!;
+
+    handleAdding() {
+      context
+          .read<CartModel>()
+          .addProduct(widget.product.copyWith(quantity: quantity));
+>>>>>>> Stashed changes
 
       Navigator.pop(context);
     }
 
     return Scaffold(
       appBar: AppBar(),
+<<<<<<< Updated upstream
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
+=======
+      body: ListView(
+>>>>>>> Stashed changes
         children: [
           SizedBox(
             height: 400,
             child: Image.network(
+<<<<<<< Updated upstream
               '$BASEURL/products/images/${widget.product.image}',
               fit: BoxFit.cover,
               height: double.maxFinite,
               width: double.maxFinite,
             ),
+=======
+                '$BASEURL/products/images/${widget.product.image}',
+                fit: BoxFit.cover,
+                height: double.maxFinite,
+                width: double.maxFinite,
+                headers: {
+                  HttpHeaders.authorizationHeader: consumer.token!,
+                }),
+>>>>>>> Stashed changes
           ),
           ListTile(
             title: Text(widget.product.name),

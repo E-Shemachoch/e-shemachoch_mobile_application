@@ -1,5 +1,13 @@
+<<<<<<< Updated upstream
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:eshemachoch_mobile_application/constants/api.dart';
+=======
+import 'dart:io';
+
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:eshemachoch_mobile_application/constants/api.dart';
+import 'package:eshemachoch_mobile_application/viewmodels/consumer/consumer_model.dart';
+>>>>>>> Stashed changes
 import 'package:eshemachoch_mobile_application/viewmodels/product/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:eshemachoch_mobile_application/views/home/component/product_tile.dart';
@@ -10,6 +18,11 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< Updated upstream
+=======
+    final consumer = context.read<ConsumerModel>().consumer!;
+
+>>>>>>> Stashed changes
     _buildHeader(String text) {
       return SliverToBoxAdapter(
         child: Padding(
@@ -45,11 +58,21 @@ class MyHomePage extends StatelessWidget {
                 SliverToBoxAdapter(
                   child: CarouselSlider(
                     items: model.products!
+<<<<<<< Updated upstream
                         .sublist(0, model.products!.length >= 5 ? 5 : 0)
                         .map((product) => Image.network(
                               '$BASEURL/products/images/${product.image}',
                               fit: BoxFit.contain,
                             ))
+=======
+                        .map((product) => Image.network(
+                                '$BASEURL/products/images/${product.image}',
+                                fit: BoxFit.contain,
+                                headers: {
+                                  HttpHeaders.authorizationHeader:
+                                      consumer.token!,
+                                }))
+>>>>>>> Stashed changes
                         .toList(),
                     options: CarouselOptions(height: 180.0),
                   ),

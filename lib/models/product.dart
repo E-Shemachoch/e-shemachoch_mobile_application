@@ -13,7 +13,12 @@ class Product {
   final String image;
   final int date;
 
+<<<<<<< Updated upstream
   factory Product.fromJson(Map<String, dynamic> json) => _$ProductFromJson(json);
+=======
+  factory Product.fromJson(Map<String, dynamic> json) =>
+      _$ProductFromJson(json);
+>>>>>>> Stashed changes
 
   Map<String, dynamic> toJson() => _$ProductToJson(this);
 
@@ -25,7 +30,11 @@ class Product {
           String? image,
           int? date}) =>
       Product(
+<<<<<<< Updated upstream
         id,
+=======
+        id ?? this.id,
+>>>>>>> Stashed changes
         name ?? this.name,
         price ?? this.price,
         quantity ?? this.quantity,

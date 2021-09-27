@@ -18,6 +18,16 @@ class MyNotificationPage extends StatelessWidget {
             return ListTile(
               title: Text(notice.title),
               subtitle: Text(date.toString()),
+              onTap: () {
+                showDialog(
+                    context: context,
+                    builder: (_) {
+                      return AlertDialog(
+                        title: Text(notice.title),
+                        content: Text(notice.message),
+                      );
+                    });
+              },
             );
           },
           itemCount: model.notices!.length,
